@@ -1,0 +1,639 @@
+/* Add @font-face to load the Bank Gothic font */
+@import url('https://fonts.googleapis.com/css2?family=Eurostile:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+.top-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #683be2;
+    padding: 10px 20px;
+    width:100%;
+}
+
+.top-banner img.logo {
+    height: 50px; /* Adjust the size as needed */
+    width: auto;
+}
+
+.navbar {
+    display: flex;
+    gap: 2px; /* Space between buttons */
+}
+
+/* Top Banner Styles */
+.top-banner {
+    background-color: #683be2;  /* Banner color */
+    padding: 10px 15px;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.top-banner nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.top-banner nav ul li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.top-banner nav ul li a {
+    color: white;  /* Keep the text color white */
+    text-decoration: none;  /* Remove underline from links */
+    font-family: 'Eurostile', sans-serif;
+    font-size: 18px;  /* Button font size */
+    padding: 10px 20px;  /* Add padding to buttons */
+    border-radius: 8px;  /* Rounded corners */
+    transition: background-color 0.3s ease;  /* Add hover effect */
+}
+
+/* Optional: Keep the button's background color as is */
+.top-banner nav ul li a:hover {
+    background-color: #0056b3;  /* Darker color when hovering */
+}
+
+/* Optional: Add margin to body to prevent overlap */
+body {
+    font-family: 'Eurostile', sans-serif;
+    margin-top: 60px;  /* Adjust based on banner height */
+}
+
+/* Header Section */
+.header {
+    background-color: #030108; /* Dark background for the header */
+    padding: 20px 0;  /* Add padding for spacing */
+    text-align: center;  /* Center align the content */
+    position: fixed;  /* Keep the header fixed at the top */
+    top: 0; 
+    left: 0;
+    right: 0;
+    z-index: 1000;  /* Ensure it stays on top of other elements */
+}
+
+/* Navigation Bar within the header */
+.navbar {
+    display: flex;
+    justify-content: flex-start;  /* Center the nav items */
+    align-items: flex-start;
+}
+
+.nav-button {
+    color: rgb(17, 7, 7);
+    text-decoration: none;  /* Remove underline */
+    padding: 10px 20px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 18px;
+    margin: 0 15px;  /* Space out the buttons */
+    border-radius: 5px;  /* Rounded corners */
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: #00ff4c;  /* Add a hover effect */
+    color: rgb(114, 108, 134);
+}
+
+/* Optional: Mobile responsive styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;  /* Stack navbar items vertically on smaller screens */
+        align-items: flex-start;  /* Align navbar items to the left */
+    }
+
+    .nav-button {
+        margin-bottom: 10px;  /* Add space between stacked items */
+    }
+}
+
+/* About Page Specific Styling */
+.about-section {
+    max-width: 5000px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #003366;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.about-section h1 {
+    font-size: 36px;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    font-size: 18px;
+    color: #edeef3;
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    padding: 10px;
+}
+
+footer {
+    width: 100%;  /* Make the footer span the full width of the page */
+    background: #222;  /* Background color */
+    color: white;  /* Text color */
+    text-align: center;  /* Center the footer text */
+    padding: 10px;  /* Padding around the text */
+    margin-top: auto;  /* Ensure footer sticks to the bottom of the screen */
+}
+
+/* Center-align the filters */
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Adjust spacing between filters as needed */
+    margin: 10px 0;
+}
+
+/* Center-align the movie posters */
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Limit to 3 items per row */
+    gap: 15px; /* Adjust spacing between movie posters */
+    justify-content: center;
+    margin: 0 auto;
+}
+
+/* Footer fix: Stick to bottom */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+footer {
+    margin-top: auto;
+    background-color: #02010c; /* Example background color */
+    color: rgb(94, 171, 223); /* Example text color */
+    font-family: 'Orbitron', sans-serif;
+    padding: 10px;
+    text-align: center;
+    padding: 10px 0;
+    position: relative; /* Remove absolute positioning */
+    width: 100%;
+}
+
+/* Navigation styles */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+/* Movie grid styles */
+.movies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 60px;
+    padding: 20px;
+}
+
+/* Movie card styles */
+.movie-card {
+    border: 1px solid #131596;
+    border-radius: 8px;
+    padding: 5px;
+    text-align: center;
+    background: #222;
+    color: #fff;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 300px;
+}
+
+.movie-card h3 {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.2;
+    min-height: 2em;
+}
+
+/* Movie poster styles */
+.movie-poster {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 2/3;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* Form styles */
+.form-group {
+    margin-bottom: 20px; /* Increased spacing between form groups */
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;  /* Ensure the labels are consistent */
+    font-weight: bold; /* Bold labels for clarity */
+}
+
+input[type="text"],
+input[type="number"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;  /* Increased padding for better input field appearance */
+    border: 1px solid #555;
+    border-radius: 8px;  /* Rounded corners */
+    background-color: #333;
+    color: #fff;
+    font-size: 16px;  /* Adjust for readability */
+    margin-bottom: 15px;  /* Space between input fields */
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="password"]:focus {
+    border-color: #007bff;
+    outline: none; /* Remove default outline */
+}
+
+/* Flexbox for aligning buttons to the right */
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;  
+    width: 100%;
+    padding: 10px 0;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;  /* Larger padding for buttons */
+    border: none;
+    border-radius: 8px;  /* Rounded button corners */
+    cursor: pointer;
+    font-size: 18px;  /* Consistent font size */
+    transition: background-color 0.3s ease;
+    width: auto;  /* Ensure button doesn't stretch */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Optional: Adjust button appearance for mobile */
+@media (max-width: 768px) {
+    .navbar {
+        text-align: left;  /* Align navbar content to the left on smaller screens */
+        padding-left: 20px;
+    }
+
+    .nav-button {
+        display: block;
+        margin-bottom: 10px;  /* Stack buttons vertically */
+    }
+}
+
+/* Flash messages */
+.flashes {
+    list-style-type: none;
+    padding: 10px;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    border-radius: 8px;
+    color: #721c24;
+    margin-bottom: 20px; /* Increased margin between flash messages */
+}
+
+.flashes li {
+    margin-bottom: 5px;
+}
+
+/* Table styles */
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+    border-collapse: collapse;
+}
+
+.table th,
+.table td {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.table tbody + tbody {
+    border-top: 2px solid #dee2e6;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Container for database view */
+.container {
+    max-width: 1140px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .movies-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}
+
+/* Specific styles for movie descriptions */
+.movie-description {
+    font-size: 14px;  /* Keep the font size as is */
+    line-height: 1.4;  /* Adjust the line height for readability */
+    color: #bbb;  /* A darker grey color for better contrast */
+    margin-top: 10px;  /* Space above the description */
+    margin-bottom: 10px;  /* Space below the description */
+    font-family: 'Eurostile', sans-serif; /* Use Eurostile font */
+}
+
+/* Form container */
+.form-container {
+    width: 100%;
+    max-width: 800px;  /* Center the form with max width */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #222;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Animation styles for fade-up effect */
+.animated {
+    opacity: 0; /* Start invisible */
+    transform: translateY(20px); /* Start from below */
+    animation-duration: 1s;
+    animation-fill-mode: both; /* Keep the final state of the animation */
+}
+
+/* Add delays for staggering animations */
+.fade-up {
+    animation-name: fadeUp;
+}
+
+.delay-1 {
+    animation-delay: 0.2s;
+}
+
+.delay-2 {
+    animation-delay: 0.4s;
+}
+
+.delay-3 {
+    animation-delay: 0.6s;
+}
+
+.delay-4 {
+    animation-delay: 0.8s;
+}
+
+/* Keyframes for fading and sliding up */
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Slide to its normal position */
+    }
+}
+
+/* Shooting star effect with more random movement */
+@keyframes shootStar {
+    0% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(var(--random-x), var(--random-y));
+        opacity: 1;
+    }
+}
+
+/* Container for the shooting stars */
+.stars-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;  /* Make sure it doesn't interfere with interactions */
+    z-index: 0;  /* Keep stars behind other content */
+}
+
+/* Basic star styling */
+.star {
+    position: absolute;
+    background-color: white;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    animation: shootStar var(--duration) linear infinite;
+    z-index: 0;
+}
+
+/* To create random movement for the stars */
+.star {
+    --duration: calc(2s + (random() * 2s)); /* Random duration */
+    --random-x: calc(100vw * random()); /* Random horizontal movement */
+    --random-y: calc(100vh * random()); /* Random vertical movement */
+}
+
+/* Randomize more stars */
+.star:nth-child(odd) {
+    animation-delay: 1s;
+}
+.search-form {
+    margin-bottom: 20px;
+}
+
+.search-select,
+.search-input {
+    margin-right: 10px;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #444;
+    background-color: #333;
+    color: #fff;
+}
+
+.search-button {
+    background: #007bff;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    background: #0056b3;
+}
+
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 30px;
+    padding: 20px;
+    padding-bottom: 50px;
+}
+
+.movie-card {
+    background: #1a1a1a;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.movie-card:hover {
+    transform: translateY(-5px);
+}
+
+.movie-poster {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.movie-poster-placeholder {
+    width: 100%;
+    height: 300px;
+    background-color: #2c2c2c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #888;
+    font-style: italic;
+}
+
+.movie-info {
+    padding: 15px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.movie-title {
+    font-size: 1em;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.movie-release-date {
+    font-size: 0.8em;
+    color: #bbb;
+    margin-bottom: 5px;
+}
+
+.streaming-title {
+    font-size: 0.9em;
+    color: #fff;
+    margin-top: 10px;
+}
+
+.streaming-type {
+    font-size: 0.8em;
+    color: #888;
+    margin: 5px 0 2px;
+}
+
+.streaming-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.streaming-provider {
+    font-size: 0.75em;
+    color: #ddd;
+    margin: 2px 0;
+}
+
+.no-streaming-info {
+    font-size: 0.75em;
+    color: #888;
+    font-style: italic;
+}
+
+.search-form {
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.search-select,
+.search-input {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #444;
+    background-color: #333;
+    color: #fff;
+}
+
+.search-button {
+    background: #007bff;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    background: #0056b3;
+}
+
+.no-results {
+    color: #888;
+    font-style: italic;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Media Queries for Responsiveness */
+@media (min-width: 576px) {
+    .movie-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 768px) {
+    .movie-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 992px) {
+    .movie-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

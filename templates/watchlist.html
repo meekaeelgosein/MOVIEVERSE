@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<style>
+    .watchlist-container {
+        min-height: calc(100vh - 140px);
+        padding: 20px;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    .movies-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 150px;
+        padding: 20px 0;
+    }
+
+    .movie-card {
+        background: rgba(26, 26, 26, 0.8);
+        border: 1px solid #683be2;
+        border-radius: 8px;
+        padding: 10px;
+        text-align: center;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        cursor: pointer;
+    }
+
+    .movie-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 30px rgba(104, 59, 226, 0.2);
+    }
+
+    .movie-card img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+
+    .movie-card h3 {
+        color: #fff;
+        font-family: 'Orbitron', sans-serif;
+        font-size: 1em;
+        margin-top: 10px;
+    }
+
+    .empty-message {
+        text-align: center;
+        color: #999;
+        font-family: 'Eurostile', sans-serif;
+        padding: 40px;
+        font-size: 1.2em;
+    }
+</style>
+
+<div class="watchlist-container">
+    {% if user_movies %}
+    <div class="movies-grid">
+        {% for movie in user_movies %}
+        <div class="movie-card">
+            {% if movie.poster_path %}
+                <img src="https://image.tmdb.org/t/p/w500{{ movie.poster_path }}" alt="{{ movie.title }}">
+            {% else %}
+                <img src="https://via.placeholder.com/200x300?text=No+Image" alt="No Image Available">
+            {% endif %}
+            <h3>{{ movie.title }}</h3>
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+    <p class="empty-message">Your watchlist is empty. Start adding movies!</p>
+    {% endif %}
+</div>
+
+{% endblock %}
